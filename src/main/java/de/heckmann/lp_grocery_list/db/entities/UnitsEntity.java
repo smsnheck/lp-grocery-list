@@ -20,6 +20,14 @@ public class UnitsEntity {
 	@Column(name = "unit")
 	private String unit;
 	
+	public UnitsEntity(){}
+	
+	public UnitsEntity(Long id, String unit, ProductsEntity products) {
+		this.id = id;
+		this.unit = unit;
+	}
+	
+
 	public Long getId() {
 		return id;
 	}
@@ -36,10 +44,10 @@ public class UnitsEntity {
 		this.unit = unit;
 	}
 
+
 	@Override
 	public String toString() {
 		return "UnitsEntity [id=" + id + ", unit=" + unit + "]";
 	}
-	
 	
 }

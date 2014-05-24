@@ -23,39 +23,25 @@ public class ProductsEntity {
 	@Column(name = "productname")
 	private String productname;
 
-	// @Column(name = "units_id")
 	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "units_id")
-	private UnitsEntity units_id;
-	
-	
+	@JoinColumn(name="units_id") 
+	private UnitsEntity unitsEntity;
+
 	public ProductsEntity(){}
-
-	public ProductsEntity(String productname) {
-		this.productname = productname;
-	}
 	
-	public ProductsEntity(String productname, UnitsEntity units_id) {
+	public ProductsEntity(Long idproducts, String productname,
+			UnitsEntity unitsEntity) {
+		this.idproducts = idproducts;
 		this.productname = productname;
-		this.units_id = units_id;
-	}
-
-
-
-	public UnitsEntity getUnits_id() {
-		return units_id;
-	}
-
-	public void setUnits_id(UnitsEntity units_id) {
-		this.units_id = units_id;
+		this.unitsEntity = unitsEntity;
 	}
 
 	public Long getIdproducts() {
 		return idproducts;
 	}
 
-	public void setIdproducts(Long id) {
-		this.idproducts = id;
+	public void setIdproducts(Long idproducts) {
+		this.idproducts = idproducts;
 	}
 
 	public String getProductname() {
@@ -66,10 +52,18 @@ public class ProductsEntity {
 		this.productname = productname;
 	}
 
+	public UnitsEntity getUnitsEntity() {
+		return unitsEntity;
+	}
+
+	public void setUnitsEntity(UnitsEntity unitsEntity) {
+		this.unitsEntity = unitsEntity;
+	}
+
 	@Override
 	public String toString() {
 		return "ProductsEntity [idproducts=" + idproducts + ", productname="
-				+ productname + ", units_id=" + units_id + "]";
+				+ productname + ", unitsEntity=" + unitsEntity.getUnit() + "]";
 	}
 
 }
