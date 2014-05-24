@@ -1,0 +1,25 @@
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<td>ID</td>
+			<td>Produkt</td>
+			<td>Einheit</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="product in products._embedded.productsEntities">
+			<td>{{product.id}}</td>
+			<td>{{product.productName}}</td>
+			<td>{{product.units.unit}}</td>
+			<td><a href="{{product.id}}"><span
+					class="glyphicon glyphicon-edit"></span></a></td>
+			<td><a href="{{product.id}}"><span
+					class="glyphicon glyphicon-trash"></span></a></td>
+		</tr>
+	</tbody>
+</table>
+
+<a href="" ng-click="addProduct()"> 
+	<span class="glyphicon glyphicon-plus">Hinzufügen</span>
+</a>

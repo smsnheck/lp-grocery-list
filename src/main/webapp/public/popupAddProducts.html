@@ -1,0 +1,16 @@
+<div class="container" ng-controller="ProductsCtrl">
+	<form name="addProducts">
+		<p>
+			Produkt: <input type="text" name="newProduct" ng-model="newProduct.name" required>
+		</p>
+		<p>
+			Einheit: 
+			<select ng-model="newProduct.unit" ng-options="unit.unit for unit in units._embedded.unitsEntities">
+				<option value="">Bitte wählen </option>
+			</select>
+		</p>
+		<p>
+			<button ng-click="postProduct(newProduct)">Speichern</button>
+		</p>
+	</form>
+</div>

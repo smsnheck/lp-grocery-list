@@ -1,0 +1,12 @@
+<div class="container" ng-controller="UnitsCtrl">
+	<form name="addUnit">
+		<p>
+			Einheit: <input type="text" name="newUnit" ng-model="newUnit.name" required>
+		</p>
+
+		<p>
+			<button ng-click="postUnit(newUnit)">Speichern</button>
+		</p>
+	</form>
+	<span ng-show="addedUnitBool" class="label label-success"> Erfolgreich hinzugefügt</span>
+</div>
