@@ -29,9 +29,8 @@ public class ProductsEntity {
 
 	public ProductsEntity(){}
 	
-	public ProductsEntity(Long idproducts, String productname,
+	public ProductsEntity(String productname,
 			UnitsEntity unitsEntity) {
-		this.idproducts = idproducts;
 		this.productname = productname;
 		this.unitsEntity = unitsEntity;
 	}

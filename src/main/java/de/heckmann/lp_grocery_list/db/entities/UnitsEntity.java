@@ -27,6 +27,10 @@ public class UnitsEntity {
 		this.unit = unit;
 	}
 	
+	public UnitsEntity(Long id){
+		this.id = id;
+	}
+	
 
 	public Long getId() {
 		return id;

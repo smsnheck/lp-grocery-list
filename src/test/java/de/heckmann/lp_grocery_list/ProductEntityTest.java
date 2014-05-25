@@ -34,7 +34,7 @@ public class ProductEntityTest {
 		List<ProductsEntity> peList = repository.findAll();
 		assertTrue("Found not the expected products", peList.size() >= 15);
 	}
-	
+	/*
 	@Ignore
 	@Test
 	public void insertProduct() {
@@ -59,8 +59,9 @@ public class ProductEntityTest {
 				productsCount == newProductsCount);
 
 		repository.delete(toAdd);
-	}
+	}*/
 
+	/*
 	@Ignore
 	@Test
 	public void insertAndFindProduct() {
@@ -82,6 +83,9 @@ public class ProductEntityTest {
 				.getId());
 		repository.delete(toAdd);
 	}
+	*/
+	
+	/*
 	@Ignore
 	@Test
 	public void insertAndDeleteProduct() {
@@ -102,4 +106,5 @@ public class ProductEntityTest {
 		listAfterInsertAndDelete = repository.findByProductName(PRODUCT_NAME);
 		assertNull(listAfterInsertAndDelete);
 	}
+	*/
 }
